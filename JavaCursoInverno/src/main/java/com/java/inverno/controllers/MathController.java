@@ -22,4 +22,29 @@ public class MathController {
 	public Double sum(@PathVariable(name = "numberOne") String numberOne, @PathVariable(name = "numberTwo") String numberTwo) {
 		return simpleMath.sum(numberOne, numberTwo);
 	}
+	
+	@GetMapping(path = "/sub/{numberOne}/{numberTwo}")
+	public Double sub(@PathVariable(name = "numberOne") String numberOne, @PathVariable(name = "numberTwo") String numberTwo) {
+		return simpleMath.sub(numberOne, numberTwo);
+	}
+	
+	@GetMapping(path = "/mult/{numberOne}/{numberTwo}")
+	public Double mult(@PathVariable(name = "numberOne") String numberOne, @PathVariable(name = "numberTwo") String numberTwo) {
+		return simpleMath.mult(numberOne, numberTwo);
+	}
+	
+	@GetMapping(path = "/div/{numberOne}/{numberTwo}")
+	public Double div(@PathVariable(name = "numberOne") String numberOne, @PathVariable(name = "numberTwo") String numberTwo) {
+		return simpleMath.div(numberOne, numberTwo);
+	}
+	
+	@GetMapping(path = "/med/{numberOne}/{numberTwo}")
+	public Double med(@PathVariable(name = "numberOne") String numberOne, @PathVariable(name = "numberTwo") String numberTwo) {
+		return simpleMath.med(numberOne, numberTwo);
+	}
+	
+	@GetMapping(path = "/sqrt/{number}")
+	public Double sqrt(@PathVariable(name = "number") String number) {
+		return simpleMath.sqrt(number);
+	}
 }
